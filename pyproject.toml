@@ -1,0 +1,26 @@
+[project]
+name = "fastmail-to-gmail"
+version = "1.0.0"
+description = "Verify and migrate emails from Fastmail to Google Workspace"
+requires-python = ">=3.10"
+dependencies = [
+    "google-api-python-client>=2.100.0",
+    "google-auth-httplib2>=0.2.0",
+    "google-auth-oauthlib>=1.1.0",
+    "requests>=2.31.0",
+    "python-dateutil>=2.8.2",
+    "tqdm>=4.66.0",
+]
+
+[project.scripts]
+fm-setup = "fastmail_to_gmail.setup_profile:main"
+fm-verify = "fastmail_to_gmail.verify:main"
+fm-migrate = "fastmail_to_gmail.migrate:main"
+fm-status = "fastmail_to_gmail.check_status:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fastmail_to_gmail"]

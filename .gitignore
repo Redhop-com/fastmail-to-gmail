@@ -1,0 +1,18 @@
+# Virtual environment
+.venv/
+
+# Profiles (credentials, data, logs, reports)
+profiles/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Claude config
+.claude/
+
+# OS artifacts
+nul
+.DS_Store
+Thumbs.db
